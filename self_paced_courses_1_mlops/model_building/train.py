@@ -18,10 +18,10 @@ from huggingface_hub.utils import RepositoryNotFoundError, HfHubHTTPError
 
 api = HfApi()
 
-Xtrain_path = "hf://datasets/Pauline-Zeestraten/PIMA-Diabetes-Prediction/Xtrain.csv"                    # enter the Hugging Face username here
-Xtest_path = "hf://datasets/Pauline-Zeestraten/PIMA-Diabetes-Prediction/Xtest.csv"                      # enter the Hugging Face username here
-ytrain_path = "hf://datasets/Pauline-Zeestraten/PIMA-Diabetes-Prediction/ytrain.csv"                    # enter the Hugging Face username here
-ytest_path = "hf://datasets/Pauline-Zeestraten/PIMA-Diabetes-Prediction/ytest.csv"                      # enter the Hugging Face username here
+Xtrain_path = "hf://datasets/Baolina/PIMA-Diabetes-Prediction/Xtrain.csv"                    # enter the Hugging Face username here
+Xtest_path = "hf://datasets/Baolina/PIMA-Diabetes-Prediction/Xtest.csv"                      # enter the Hugging Face username here
+ytrain_path = "hf://datasets/Baolina/PIMA-Diabetes-Prediction/ytrain.csv"                    # enter the Hugging Face username here
+ytest_path = "hf://datasets/Baolina/PIMA-Diabetes-Prediction/ytest.csv"                      # enter the Hugging Face username here
 
 Xtrain = pd.read_csv(Xtrain_path)
 Xtest = pd.read_csv(Xtest_path)
@@ -86,7 +86,7 @@ print(classification_report(ytest, y_pred_test))
 joblib.dump(best_model, "best_pima_diabetes_model_v1.joblib")
 
 # Upload to Hugging Face
-repo_id = "Pauline-Zeestraten/PIMA-Diabetes-Prediction"                                         # enter the Hugging Face username here
+repo_id = "Baolina/PIMA-Diabetes-Prediction"                                         # enter the Hugging Face username here
 repo_type = "model"
 
 api = HfApi(token=os.getenv("HF_TOKEN"))
