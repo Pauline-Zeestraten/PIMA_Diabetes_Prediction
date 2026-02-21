@@ -3,7 +3,7 @@ from huggingface_hub import HfApi, create_repo
 import os
 
 
-repo_id = "Pauline-Zeestraten/PIMA-Diabetes-Prediction"                # enter the Hugging Face username here
+repo_id = "Baolina/PIMA-Diabetes-Prediction"                # enter the Hugging Face username here
 repo_type = "dataset"
 
 # Initialize API client
